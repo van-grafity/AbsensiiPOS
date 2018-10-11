@@ -11,7 +11,7 @@ import coding.vanlaban.android.mvpthree.View.HomeView;
 
 
 public class HomePresenterImpl implements HomePresenter{
-   private HomeView homeView;
+    private HomeView homeView;
     private UserStore store;
     private Context context;
     private Activity activity;
