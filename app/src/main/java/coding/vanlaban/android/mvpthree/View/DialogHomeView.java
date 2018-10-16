@@ -17,7 +17,7 @@ public class DialogHomeView implements HomeView {
     public DialogHomeView(Context context) {
         this.context = context;
         FrameLayout parent = new FrameLayout(context);
-        parent.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        parent.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         view = LayoutInflater.from(context).inflate(R.layout.activity_two, parent, true);
     }
 
@@ -33,7 +33,7 @@ public class DialogHomeView implements HomeView {
         listView.setAdapter(arrayAdapter);
     }
 
-    }
+}
 
 
 

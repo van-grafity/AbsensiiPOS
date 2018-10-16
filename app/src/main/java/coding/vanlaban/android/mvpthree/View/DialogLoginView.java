@@ -16,9 +16,9 @@ import butterknife.OnClick;
 import coding.vanlaban.android.mvpthree.Presenter.LoginPresenter;
 import coding.vanlaban.android.mvpthree.R;
 
-public class DialogLoginView implements LoginView {
+public class DialogLoginView implements LoginView{
     @BindView(R.id.textViewUserName)
-    TextView textViewUserName;
+    EditText textViewUserName;
     @BindView(R.id.textViewPassword)
     EditText textViewPassword;
     @BindView(R.id.btnLogin)
@@ -45,16 +45,9 @@ public class DialogLoginView implements LoginView {
     }
 
     @Override
-    public void loginSuccessFully() {
-    }
-
-    @Override
-    @OnClick(R.id.idTV)
-    public void loginFail() {
+    public void loginFail(String errorMessage){
         ButterKnife.bind(view);
-        //String showError = "Silahkan masukkan username dan password dengan benar";
-        //idTV.setText(String.valueOf(showError));
-        Toast.makeText(context,"username dan kata sandi anda salah",Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, errorMessage,Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -12,5 +12,10 @@
     <string name="hintusernm">username</string>
     <string name="pw">password</string>
     <string name="lgn">Login</string>
+    <string name="msg">username dan kata sandi anda salah</string>
+    <string name="no_hp">No Hp :</string>
+    <string name="search">Search</string>
+    <string name="setting">Setting</string>
+    <string name="new_message">New Message</string>
 
 </resources>
