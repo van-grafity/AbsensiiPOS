@@ -22,7 +22,6 @@ public class UserStoreAdapter implements UserStore {
                 return user;
         }
         return new UserNull();
-
     }
 
     @Override
@@ -33,6 +32,4 @@ public class UserStoreAdapter implements UserStore {
         }
         return result;
     }
-
 }
-

@@ -15,7 +15,8 @@ import coding.vanlaban.android.mvpthree.Application.MyApplication;
 import coding.vanlaban.android.mvpthree.Presenter.HomePresenter;
 import coding.vanlaban.android.mvpthree.R;
 
-public class ActivityTwo extends AppCompatActivity {
+public class ActivityTwo extends AppCompatActivity{
+
     @Inject
     HomePresenter homePresenter;
 
@@ -23,7 +24,6 @@ public class ActivityTwo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //pattern Singleton
-
         AppComponent appComp=((MyApplication)getApplication()).getAppComponent();
         DaggerHomeComponent.builder()
                 .appComponent(appComp)
@@ -38,7 +38,10 @@ public class ActivityTwo extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.option_menu, menu);
-        return true;
+
+        /*MenuItem searchItem = menu.findItem(R.id.app_bar_search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);*/
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
@@ -48,4 +51,5 @@ public class ActivityTwo extends AppCompatActivity {
         }
         return true;
     }
+
 }

@@ -2,6 +2,7 @@ package coding.vanlaban.android.mvpthree.Activities.Main.Dagger;
 
 import android.content.Context;
 
+import coding.vanlaban.android.mvpthree.Infrastruktur.Net.AccountApi;
 import coding.vanlaban.android.mvpthree.Infrastruktur.UserStore;
 import coding.vanlaban.android.mvpthree.Presenter.LoginPresenter;
 import coding.vanlaban.android.mvpthree.Presenter.LoginPresenterImpl;
@@ -14,8 +15,8 @@ import dagger.Provides;
 public class MainModule {
     @Provides
     @MainScope
-    LoginPresenter provideLoginPresenter(Context context, LoginView loginView, UserStore userStore){
-        return new LoginPresenterImpl(context, loginView, userStore);
+    LoginPresenter provideLoginPresenter(Context context, LoginView loginView, UserStore userStore, AccountApi accountApi){
+        return new LoginPresenterImpl(context, loginView,userStore,accountApi);
     }
     @Provides
     @MainScope

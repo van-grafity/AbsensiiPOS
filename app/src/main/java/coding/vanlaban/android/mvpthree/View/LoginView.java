@@ -6,8 +6,8 @@ import coding.vanlaban.android.mvpthree.Presenter.LoginPresenter;
 
 public interface LoginView {
     void showValidationErrorMsg();
-    void loginSuccessFully();
-    void loginFail();
+
+    void loginFail(String errorMessage);
     View constructView();
 
     void setPresenter(LoginPresenter loginPresenter);
